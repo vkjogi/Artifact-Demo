@@ -1,6 +1,6 @@
-name:Artifact Demo
+name: Artifact Demo
 
-no:push
+on: push
 
   jobs:
      build:
@@ -9,7 +9,9 @@ no:push
             - run:
                  mkdir temp
                  echo "alpha" > temp/alpha.html
-          - users:actions/upload-artifact@v4
+
+                 
+          - uses: actions/upload-artifact@v4
           with:
-          name:files
-          pth:temp/
+          name: files
+          pth: temp/
